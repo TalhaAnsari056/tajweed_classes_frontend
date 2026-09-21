@@ -1,0 +1,5 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64" role="img" aria-label="expert teachers">
+  <rect x="4" y="4" width="56" height="56" rx="13" fill="#EAF5F0"/>
+  <path d="m13 25 19-9 19 9-19 9-19-9Z" fill="none" stroke="#087052" stroke-width="2.4" stroke-linejoin="round"/>
+  <path d="M21 30v10c7 5 15 5 22 0V30M50 26v12" fill="none" stroke="#087052" stroke-width="2.4" stroke-linecap="round"/>
+</svg>
