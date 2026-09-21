@@ -47,7 +47,7 @@ Scoped rules live in `.claude/rules/`. Workflows live in `.claude/skills/`.
 
 ```
 src/
-  assests/     existing assets (folder name is misspelled; do not rename unasked)
+  assets/      provided images, SVGs and brand assets
   components/  reusable UI (Button, Card, ProgressBar, ...)
   layouts/     app shell, auth layout
   pages/       one folder or file per route
@@ -83,7 +83,7 @@ src/
 
 ## 8. Assets
 
-- Existing assets live in `src/assests/`. Reference the real path.
+- Existing assets live in `src/assets/`.
 - Prefer SVG for icons and marks. Use the provided files before Tabler.
 - Import assets through Vite so they are hashed and bundled.
 - Give informative images meaningful `alt`. Decorative images use `alt=""` and `aria-hidden`.
@@ -137,7 +137,8 @@ src/
 - For any visible UI change: start `npm run dev`, open the page, take screenshots, and compare with the matching mockup.
 - Check at desktop, tablet and mobile widths, and check console errors.
 - Check keyboard navigation and focus for interactive UI.
-- Stop the dev server when done.
+- Stop the dev server you started when done.
+- **Cleanup (permanent rule):** Playwright screenshots, snapshots, logs and other artifacts (for example the `.playwright-mcp/` folder or any saved `.png`) are temporary. Use them during the task, then delete them all before the final report. Never leave them in the repository.
 - If the browser tool is unavailable or fails, say so. Do not claim visual verification.
 - The `visual-check` skill contains the procedure.
 

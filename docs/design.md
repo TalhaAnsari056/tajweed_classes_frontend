@@ -9,7 +9,7 @@ Derived from the mockups in `docs/design/references/`:
 
 Value confidence:
 
-- **Confirmed** = read from the real asset SVGs in `src/assests/login/`.
+- **Confirmed** = read from the real asset SVGs in `src/assets/login/`.
 - **Approximate** = judged visually from the mockups. Treat as direction, then verify by side-by-side comparison. Do not invent precise values beyond this.
 
 The mockups are AI-rendered bitmaps, so pixel-exact sizes are not recoverable. Match proportion, hierarchy and feel.
@@ -62,7 +62,9 @@ Rules:
   - Card title — medium serif, semibold.
   - Metadata ("7 of 17 lessons", "Lesson 4") — small sans or serif, muted.
   - Eyebrow/tagline ("LEARN · PRACTICE · GROW") — small, uppercase, wide letter-spacing, muted.
-- Font choice must be decided in the design-system task. Prefer a free web font pairing, and add it only with approval (see CLAUDE.md dependency rules).
+- **Selected fonts (fixed):** **Playfair Display** (500–700) is the display face for page titles, hero headings, section and card titles, the login heading and the wordmark. **Inter** (400–700) is the UI face for body text, navigation, buttons, forms, metadata and footer links. Both load from Google Fonts in `index.html`; no npm font package.
+- Tailwind tokens in `src/index.css`: `font-sans` = Inter (default on `body`), `font-display` = Playfair Display (applied by default to `h1`–`h6`; use `font-display` for non-heading display text). Fallbacks: Georgia / Times New Roman / serif for display, system-ui stack for sans.
+- Deviation from the mockups: the dashboard mockup sets card descriptions in serif. With the selected pairing, descriptions and other prose use Inter; only titles and prominent display text use Playfair Display.
 
 ## 4. Spacing and Layout
 
@@ -147,7 +149,7 @@ Rules:
 - Style: Tabler-like outline/line icons with a consistent stroke and rounded caps, sized about 20–24 px in nav and 16–20 px inline.
 - Sidebar icons are light on green. The active one is filled dark green.
 - Cards and forms use slate or green line icons. Locked lessons use a grey padlock.
-- Existing SVGs in `src/assests/login/` (eye, lock, user, arrow-right, brand-mark, feature icons, Google and Microsoft marks) are the source for the login screen.
+- Existing SVGs in `src/assets/login/` (eye, lock, user, arrow-right, brand-mark, feature icons, Google and Microsoft marks) are the source for the login screen.
 - All other icons come from `@tabler/icons-react`.
 - Feature icons on the login panel sit in small rounded mint squares.
 
@@ -158,7 +160,7 @@ Rules:
 - Course icons are circular illustrated badges, each with its own background color.
 - Login left panel: a cream top with a curved gold-outlined swoosh separating it from the deep green lower area, which holds the hadith quote.
 - Decorative images are `aria-hidden` and non-interactive. They must never reduce text contrast.
-- Only images actually present in `src/assests/` or `docs/design/references/` may be used. Do not fabricate or substitute stock art. Flag missing illustrations instead.
+- Only images actually present in `src/assets/` or `docs/design/references/` may be used. Do not fabricate or substitute stock art. Flag missing illustrations instead.
 
 ## 14. Progress UI
 

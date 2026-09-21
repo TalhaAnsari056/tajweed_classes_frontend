@@ -22,7 +22,7 @@ Playwright MCP is already installed. Do not reinstall it. Its tool schemas are d
 7. Check console messages for errors and warnings.
 8. Keyboard: Tab through the page and confirm a visible focus order and that drawers and menus open and close (Escape).
 9. If animation exists, confirm it runs and ends in the right state, then emulate `prefers-reduced-motion: reduce` and confirm motion is removed.
-10. Stop the dev server when finished.
+10. Stop the dev server, then delete all Playwright artifacts (see CLAUDE.md section 13) before reporting.
 
 ## Report
 - **Verified:** what was actually seen, with the widths tested
@@ -33,5 +33,4 @@ Playwright MCP is already installed. Do not reinstall it. Its tool schemas are d
 ## Rules
 - If Playwright MCP is unavailable or fails, say so. Do not claim a visual check.
 - Do not edit code during a check unless the user asks. Report differences instead.
-- Screenshots are temporary. Save them in the scratchpad or an untracked temp location, not in the repo.
-- Never leave the dev server running.
+- Screenshots and snapshots are temporary. Do not save them elsewhere in the repo.

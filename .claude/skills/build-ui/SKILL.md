@@ -13,7 +13,7 @@ Implement UI that matches the mockups, within frontend-only scope.
 3. Open the matching mockup(s) in `docs/design/references/`.
 4. Read `CLAUDE.md` and the rules in `.claude/rules/` that apply.
 5. Inspect `src/components/`, `src/layouts/`, `src/pages/` and `src/index.css` for reusable parts and existing tokens.
-6. List the assets the screen needs and confirm they exist in `src/assests/`. Report any that are missing. Do not fabricate them.
+6. List the assets the screen needs and confirm they exist in `src/assets/`. Report any that are missing. Do not fabricate them.
 
 ## Build
 1. State a short plan: the components to create or reuse, the route and the mock data shape.

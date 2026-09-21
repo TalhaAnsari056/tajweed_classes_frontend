@@ -38,7 +38,6 @@ Commit numbers are tracking references only. The user creates every real Git com
 - [ ] Dashboard (006)
 - [ ] Course detail (007)
 - [ ] Responsive / a11y / animation polish (008)
-- [ ] Decide whether to rename `src/assests/` to `src/assets/`
 
 ## Verification Status
 
@@ -55,13 +54,12 @@ Commit numbers are tracking references only. The user creates every real Git com
 
 - Review `docs/design.md` against the mockups. Hex values marked "Approximate" are visual estimates.
 - Confirm the rules and skills in `.claude/` match how you want Claude to work.
-- Confirm the `src/assests/` spelling decision.
+- **Rename `src/assests` to `src/assets`** (blocked while a dev server holds the folder; stop it first). Then change the favicon href in `index.html` to `/src/assets/login/brand-mark.svg`.
 - Create the Git commit yourself, then tell Claude so this file can record it as completed.
 
 ## Risks
 
 - Mockups are AI-rendered bitmaps, so exact sizes and hex codes cannot be read from them. Fidelity will rely on visual comparison.
-- Many mockup illustrations (hero scenes, course icons, mosque skyline, avatar) are not in `src/assests/`. Only login assets are present. Missing artwork must be supplied or approved.
-- Fonts are not chosen yet. Adding a web font is a dependency/network decision for Commit 003.
-- `src/assests/` misspelling could cause confusion.
+- Many mockup illustrations (hero scenes, course icons, mosque skyline, avatar) are not in `src/assets/`. Only login assets are present. Missing artwork must be supplied or approved.
+- Fonts load from Google Fonts (network dependency, no npm package). Offline or blocked networks fall back to system fonts.
 - Playwright MCP verification depends on the plugin being available in the session.

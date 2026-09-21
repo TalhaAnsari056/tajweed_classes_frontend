@@ -45,4 +45,4 @@ Forms and buttons that imply a backend (Sign In, Google/Microsoft login) must be
 
 ## Known Notes
 
-- The asset folder is spelled `src/assests/` (sic). It has not been renamed and all references must use the actual path until it is renamed deliberately.
+- Assets live in `src/assets/`.
