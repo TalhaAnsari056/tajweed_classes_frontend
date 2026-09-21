@@ -1,9 +1,11 @@
-import { Routes, Route } from 'react-router-dom'
+import { Routes, Route, Navigate } from 'react-router-dom'
+import LoginPage from './pages/login/LoginPage.jsx'
 
 export default function App() {
   return (
     <Routes>
-      <Route path="*" element={<div className="p-6">Tajweed Classes</div>} />
+      <Route path="/login" element={<LoginPage />} />
+      <Route path="*" element={<Navigate to="/login" replace />} />
     </Routes>
   )
 }
